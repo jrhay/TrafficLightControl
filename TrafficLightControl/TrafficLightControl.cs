@@ -37,8 +37,6 @@ namespace CustomControls
             InitializeComponent();
             pictureBox1.BackColor = Color.Transparent;
             LightImages = global::TrafficLightControl.Properties.Resources.TrafficLightControlImages;
-           // if (LightImages != null)
-            //    LightImages.MakeTransparent(Color.White);
         }
 
         /// <summary> 
@@ -69,16 +67,16 @@ namespace CustomControls
             switch (_State)
             {
                 case TrafficLightControlState.Good:
-                    imageRect = new Rectangle(314, 177, 260, 100);
+                    imageRect = new Rectangle(323, 163, 260, 100);
                     break;
                 case TrafficLightControlState.Bad:
-                    imageRect = new Rectangle(314, 463, 260, 100);
+                    imageRect = new Rectangle(323, 449, 260, 100);
                     break;
                 case TrafficLightControlState.Warning:
-                    imageRect = new Rectangle(314, 320, 260, 100);
+                    imageRect = new Rectangle(323, 306, 260, 100);
                     break;
                 default:
-                    imageRect = new Rectangle(314, 34, 260, 100);
+                    imageRect = new Rectangle(323, 20, 260, 100);
                     break;
             }
 
