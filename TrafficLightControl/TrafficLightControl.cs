@@ -15,7 +15,11 @@ namespace CustomControls
         None,
         Good,
         Warning,
-        Bad
+        Bad,
+        GoodWarning,
+        BadWarning,
+        GoodBad,
+        All
     }
 
     public partial class TrafficLightControl : UserControl
@@ -74,6 +78,18 @@ namespace CustomControls
                     break;
                 case TrafficLightControlState.Warning:
                     imageRect = new Rectangle(323, 306, 260, 100);
+                    break;
+                case TrafficLightControlState.GoodWarning:
+                    imageRect = new Rectangle(29, 449, 260, 100);
+                    break;
+                case TrafficLightControlState.GoodBad:
+                    imageRect = new Rectangle(29, 306, 260, 100);
+                    break;
+                case TrafficLightControlState.BadWarning:
+                    imageRect = new Rectangle(29, 163, 260, 100);
+                    break;
+                case TrafficLightControlState.All:
+                    imageRect = new Rectangle(29, 20, 260, 100);
                     break;
                 default:
                     imageRect = new Rectangle(323, 20, 260, 100);

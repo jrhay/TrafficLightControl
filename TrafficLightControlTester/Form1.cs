@@ -32,6 +32,14 @@ namespace TrafficLightControlTester
                 SetControlStatus(TrafficLightControlState.Bad);
             else if (rdoWarning.Checked)
                 SetControlStatus(TrafficLightControlState.Warning);
+            else if (rdoGoodWarning.Checked)
+                SetControlStatus(TrafficLightControlState.GoodWarning);
+            else if (rdoGoodBad.Checked)
+                SetControlStatus(TrafficLightControlState.GoodBad);
+            else if (rdoBadWarning.Checked)
+                SetControlStatus(TrafficLightControlState.BadWarning);
+            else if (rdoAll.Checked)
+                SetControlStatus(TrafficLightControlState.All);
             else
                 SetControlStatus(TrafficLightControlState.None);
         }

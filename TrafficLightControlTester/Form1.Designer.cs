@@ -36,6 +36,10 @@
             this.rdoWarning = new System.Windows.Forms.RadioButton();
             this.rdoGood = new System.Windows.Forms.RadioButton();
             this.lblControlStatus = new System.Windows.Forms.Label();
+            this.rdoGoodWarning = new System.Windows.Forms.RadioButton();
+            this.rdoGoodBad = new System.Windows.Forms.RadioButton();
+            this.rdoBadWarning = new System.Windows.Forms.RadioButton();
+            this.rdoAll = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -47,7 +51,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.groupBox1.Controls.Add(this.trafficLightControl1);
-            this.groupBox1.Location = new System.Drawing.Point(225, 48);
+            this.groupBox1.Location = new System.Drawing.Point(271, 40);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 91);
             this.groupBox1.TabIndex = 0;
@@ -67,13 +71,17 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.rdoAll);
+            this.groupBox2.Controls.Add(this.rdoBadWarning);
+            this.groupBox2.Controls.Add(this.rdoGoodBad);
+            this.groupBox2.Controls.Add(this.rdoGoodWarning);
             this.groupBox2.Controls.Add(this.rdoNone);
             this.groupBox2.Controls.Add(this.rdoBad);
             this.groupBox2.Controls.Add(this.rdoWarning);
             this.groupBox2.Controls.Add(this.rdoGood);
-            this.groupBox2.Location = new System.Drawing.Point(24, 25);
+            this.groupBox2.Location = new System.Drawing.Point(12, 25);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(106, 162);
+            this.groupBox2.Size = new System.Drawing.Size(228, 162);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Status";
@@ -128,11 +136,55 @@
             // 
             this.lblControlStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblControlStatus.AutoSize = true;
-            this.lblControlStatus.Location = new System.Drawing.Point(225, 146);
+            this.lblControlStatus.Location = new System.Drawing.Point(268, 146);
             this.lblControlStatus.Name = "lblControlStatus";
             this.lblControlStatus.Size = new System.Drawing.Size(35, 13);
             this.lblControlStatus.TabIndex = 2;
             this.lblControlStatus.Text = "label1";
+            // 
+            // rdoGoodWarning
+            // 
+            this.rdoGoodWarning.AutoSize = true;
+            this.rdoGoodWarning.Location = new System.Drawing.Point(125, 58);
+            this.rdoGoodWarning.Name = "rdoGoodWarning";
+            this.rdoGoodWarning.Size = new System.Drawing.Size(97, 17);
+            this.rdoGoodWarning.TabIndex = 4;
+            this.rdoGoodWarning.Text = "Good+Warning";
+            this.rdoGoodWarning.UseVisualStyleBackColor = true;
+            this.rdoGoodWarning.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // rdoGoodBad
+            // 
+            this.rdoGoodBad.AutoSize = true;
+            this.rdoGoodBad.Location = new System.Drawing.Point(125, 89);
+            this.rdoGoodBad.Name = "rdoGoodBad";
+            this.rdoGoodBad.Size = new System.Drawing.Size(76, 17);
+            this.rdoGoodBad.TabIndex = 5;
+            this.rdoGoodBad.Text = "Good+Bad";
+            this.rdoGoodBad.UseVisualStyleBackColor = true;
+            this.rdoGoodBad.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // rdoBadWarning
+            // 
+            this.rdoBadWarning.AutoSize = true;
+            this.rdoBadWarning.Location = new System.Drawing.Point(125, 121);
+            this.rdoBadWarning.Name = "rdoBadWarning";
+            this.rdoBadWarning.Size = new System.Drawing.Size(90, 17);
+            this.rdoBadWarning.TabIndex = 6;
+            this.rdoBadWarning.Text = "Bad+Warning";
+            this.rdoBadWarning.UseVisualStyleBackColor = true;
+            this.rdoBadWarning.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // rdoAll
+            // 
+            this.rdoAll.AutoSize = true;
+            this.rdoAll.Location = new System.Drawing.Point(125, 27);
+            this.rdoAll.Name = "rdoAll";
+            this.rdoAll.Size = new System.Drawing.Size(36, 17);
+            this.rdoAll.TabIndex = 7;
+            this.rdoAll.Text = "All";
+            this.rdoAll.UseVisualStyleBackColor = true;
+            this.rdoAll.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // Form1
             // 
@@ -162,6 +214,10 @@
         private CustomControls.TrafficLightControl trafficLightControl1;
         private System.Windows.Forms.RadioButton rdoNone;
         private System.Windows.Forms.Label lblControlStatus;
+        private System.Windows.Forms.RadioButton rdoGoodWarning;
+        private System.Windows.Forms.RadioButton rdoAll;
+        private System.Windows.Forms.RadioButton rdoBadWarning;
+        private System.Windows.Forms.RadioButton rdoGoodBad;
     }
 }
 
